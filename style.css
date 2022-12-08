@@ -1,0 +1,197 @@
+body {
+    background-image: url(Images/CorkboardImg.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+form {
+    background-image: url(Images/Paper.png);
+    background-size: 24rem;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+form button {
+    position: relative;
+    top: -0.5rem;
+}
+
+h1 {
+    font-size: 4rem !important;
+    font-weight: bold !important;
+    font-family: 'Nanum Pen Script', cursive;
+}
+
+p {
+    font-size: x-large;
+    font-weight: bold;
+    font-family: 'Indie Flower', cursive;
+}
+
+button svg {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    z-index: 999;
+    border-radius: 10px;
+    background-color: rgb(252, 137, 154);
+}
+
+.shadowHover {
+    transition: all 0.2s;
+    border-radius: 10px !important;
+}
+
+.shadowHover:hover {
+    transition: all 0.2s;
+    box-shadow: -3px 3px 17px -1px rgba(0, 0, 0, 0.75);
+}
+
+#stickyNoteContainer {
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+#stickyNoteContainer:hover {
+    overflow-y: hidden;
+    overflow-x: auto;
+}
+
+#missionBodyBox {
+    position: relative;
+    top: -0.7rem;
+    transform: rotate(-1deg);
+    background-color: #f8ea8f;
+}
+
+#missionDateBox {
+    position: relative;
+    top: -1.2rem;
+    transform: rotate(-1deg);
+    background-color: #f8ea8f;
+}
+
+#missionHourBox {
+    position: relative;
+    top: -1.9rem;
+    transform: rotate(1deg);
+    background-color: #f8ea8f;
+}
+
+.stickyNoteDiv {
+    transition: 0.3s all;
+    background-image: url(Images/StickyNote.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 260px;
+    width: 190px;
+    height: 180px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+.stickyNoteDiv:hover {
+    transition: 0.2s all;
+    transform: scale(1.03);
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.stickyNoteDiv p {
+    position: relative;
+    text-align: center;
+    left: 13%;
+    width: 150px;
+}
+
+.wrapDiv:hover {
+    transition: 0.2s all;
+    transform: scale(1.01);
+}
+
+.wrapDiv .hour {
+    opacity: 50%;
+    background-color: rgb(255, 255, 175);
+    border: 1px solid black;
+    border-radius: 5px;
+    position: relative;
+    bottom: 13%;
+    left: 5%;
+}
+
+.wrapDiv .date {
+    opacity: 50%;
+    background-color: rgb(255, 255, 175);
+    border: 1px solid black;
+    border-radius: 5px;
+    position: relative;
+    bottom: 13%;
+    left: 32%;
+}
+
+.wrapDiv:hover .hour {
+    transition: all 0.2s;
+    opacity: 100%;
+}
+
+.wrapDiv:hover .date {
+    transition: all 0.2s;
+    opacity: 100%;
+}
+
+.stickyNoteDiv button {
+    transition: all 0.2s;
+    position: sticky;
+    top: 4%;
+    left: 5%;
+    opacity: 0;
+    transform: scale(1.2);
+    border: none;
+    background-color: #ff000000;
+    z-index: 999;
+}
+
+.stickyNoteDiv:hover button {
+    transition: all 0.2s;
+    opacity: 100;
+}
+
+.stickyNoteDiv button:hover {
+    transition: all 0.2s;
+    transform: scale(1.5) rotate(180deg);
+}
+
+
+.animationNew:last-child {
+    animation: fadeInANim 0.5s;
+}
+
+@keyframes fadeInANim {
+    from {
+        transform: scale(0.1);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+.loadAnimation {
+    animation: loadAnimation 2s;
+}
+
+@keyframes loadAnimation {
+    from {
+        opacity: 0%;
+        transform: scale(0.9);
+        margin-top: 1%;
+    }
+
+    to {
+        opacity: 100%;
+        transform: scale(1);
+        margin-top: 0%;
+    }
+}
